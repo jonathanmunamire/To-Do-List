@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# WebPack
+# To-Do-List
 
-> Project to Display List of Books
+> Project to Display List of Things to do, to add them, mark them and remove then how you want
 
 ## Built With
 
@@ -23,7 +23,7 @@ To get a local copy up and running follow these simple example steps.
 ### Setup
 
     Clone this repository
-    git clone https://github.com/jonathanmunamire/Webpack.git
+    git clone https://github.com/jonathanmunamire/To-Do-List.git
 
 ### Install
 
@@ -32,10 +32,6 @@ To get a local copy up and running follow these simple example steps.
 ### Deployment
 
 [Live Demo Link]()
-
-## Create your Own Webpack Template
-
-Set up project with webpack and get the guide by clicking [here](https://github.com/microverseinc/curriculum-javascript/blob/main/todo-list/exercises/exercise_set_up_project_with_webpack.md)
 
 To get a local copy up and running follow these simple example steps.
 
