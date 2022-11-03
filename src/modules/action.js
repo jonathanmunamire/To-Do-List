@@ -17,7 +17,7 @@ export default class Action {
         });
       });
     }
-  
+
     // clear the completed tasks
     clearCompleted = (tasks) => {
       const clearBtn = document.querySelector('#clear-completed');
@@ -26,4 +26,4 @@ export default class Action {
         tasks.saveAndRender();
       });
     }
-  }
+}

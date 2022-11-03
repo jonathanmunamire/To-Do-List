@@ -41,7 +41,7 @@ body {
   margin: 0% 0% 0% 0%;
 }
 
-#todo-list li{
+#todo-list li {
   display: flex;
   justify-content: space-between;
   border-top: 1px solid rgb(211, 211, 211);
