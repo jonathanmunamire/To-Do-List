@@ -81,7 +81,7 @@ export default class Tasks {
 
   add = (value) => {
     this.tasksArray.push({
-      index: this.tasksArray.length +1,
+      index: this.tasksArray.length + 1,
       description: value,
       isCompleted: false,
     });
