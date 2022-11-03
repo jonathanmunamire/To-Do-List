@@ -1,43 +1,30 @@
-import _ from 'lodash'; // eslint-disable-line
 import './style.css';
+import Tasks from './modules/tasks.js';
+import Action from './modules/action.js';
+import dragDrop from './modules/drag.js';
 
-const toToDoArray = [
-  {
-    index: 0,
-    description: 'Exercise',
-    completed: true,
-  },
-  {
-    index: 1,
-    description: 'Take Breakfast',
-    completed: true,
-  },
-  {
-    index: 2,
-    description: 'Take a bath',
-    completed: true,
-  },
-  {
-    index: 3,
-    description: 'Study',
-    completed: true,
-  },
-];
+const tasks = new Tasks();
+const action = new Action();
 
-const toDoList = document.querySelector('#todo-list');
+// populate the todo list from storage
+tasks.populateList();
 
-const contentMarkup = () => {
-  const liMarkup = toToDoArray.map((task) => `<div id="todo-item">
-  <div id="todo-items1">
-    <input type="checkbox" name="" id="" />
-    <p id="task">${task.description}</p>
-  </div>
-  <button id="">
-    <i class="fa-solid fa-ellipsis-vertical"></i>
-  </button>
-</div>`).join('');
+// add new task
+const newInput = document.querySelector('#new-task');
+newInput.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter' && newInput.value) {
+    tasks.add(newInput.value);
+    newInput.value = '';
+  }
+});
 
-  toDoList.innerHTML = liMarkup;
-};
+// refresh the list
+const refreshBtn = document.querySelector('#refresh-list');
+refreshBtn.addEventListener('click', () => {
+  document.location.reload();
+});
 
-window.document.addEventListener('DOMContentLoaded', contentMarkup);
+// clear
+dragDrop(document.querySelectorAll('.todo-task'));
+// tasks.populateList();
+action.clearCompleted(tasks);

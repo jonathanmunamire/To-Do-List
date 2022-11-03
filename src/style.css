@@ -13,7 +13,6 @@ body {
   padding-left: 0%;
   background-color: #fff;
   box-shadow: 0 0 20px 2px rgb(121, 121, 121);
-  list-style: none;
 }
 
 #header {
@@ -25,7 +24,7 @@ body {
 #header2 {
   display: flex;
   justify-content: space-between;
-  padding: 3% 2% 2% 2%;
+  padding: 3% 2% 3% 2%;
   border-top: 1px solid rgb(211, 211, 211);
 }
 
@@ -33,24 +32,35 @@ body {
   border: none;
   outline: none;
   font-family: "Poppins", sans-serif;
+  width: 95%;
 }
 
-#todo-item {
+#todo-list {
+  list-style: none;
+  padding: 0% 0% 0% 0%;
+  margin: 0% 0% 0% 0%;
+}
+
+#todo-list li {
   display: flex;
   justify-content: space-between;
-  padding: 3% 2% 2% 2%;
   border-top: 1px solid rgb(211, 211, 211);
+  padding: 3% 2% 3% 2%;
 }
 
-#todo-items1 {
-  display: flex;
-  gap: 10px;
+#completed-input {
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  width: 70%;
 }
 
 #clear-completed {
   text-align: center;
   border-top: 1px solid rgb(211, 211, 211);
+  margin: 0% 0% 0% 0%;
   background-color: rgb(238, 238, 238);
+  padding: 2% 2% 2% 2%;
 }
 
 button {
