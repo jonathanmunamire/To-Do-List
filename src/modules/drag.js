@@ -26,13 +26,6 @@ const dragDrop = (listItems) => {
     localStorage.setItem('tasks', JSON.stringify(myTasks));
   }
 
-  function dragDrop() {
-    const dragEndIndex = +this.getAttribute('data-index');
-    swapItems(dragStartIndex, dragEndIndex);
-    this.style.backgroundColor = '#00f0.3';
-    document.location.reload();
-  }
-
   function addEventListener() {
     const draggables = document.querySelectorAll('.todo-task');
 
