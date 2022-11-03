@@ -83,7 +83,7 @@ export default class Tasks {
     this.tasksArray.push({
       index: this.tasksArray.length + 1,
       description: value,
-      isCompleted: false,                           
+      isCompleted: false,
     });
     this.saveAndRender();
   }
