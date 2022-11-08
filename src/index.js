@@ -20,7 +20,7 @@ newInput.addEventListener('keypress', (e) => {
 
 const addButton = document.querySelector('#add-button');
 addButton.addEventListener('click', () => {
-  if(newInput.value !== ""){
+  if (newInput.value !== '') {
     tasks.add(newInput.value);
     newInput.value = '';
   }
