@@ -18,6 +18,8 @@ newInput.addEventListener('keypress', (e) => {
   }
 });
 
+const addButton = document.querySelector('#add-button');
+
 // refresh the list
 const refreshBtn = document.querySelector('#refresh-list');
 refreshBtn.addEventListener('click', () => {

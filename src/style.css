@@ -4,6 +4,7 @@ body {
   background-color: bisque;
   font-family: "Poppins", sans-serif;
   color: rgb(49, 49, 49);
+  font-weight: 500;
 }
 
 #main-list {
@@ -46,6 +47,28 @@ body {
   justify-content: space-between;
   border-top: 1px solid rgb(211, 211, 211);
   padding: 3% 2% 3% 2%;
+}
+
+.todo-input {
+  font-size: 15px;
+}
+
+.fa-square-check {
+  display: none;
+  color: #0282d8;
+}
+
+.todo-task.active .fa-square-check {
+  display: block;
+}
+
+.todo-task.active .fa-square {
+  display: none;
+}
+
+.todo-task.active .todo-input {
+  text-decoration: line-through;
+  color: rgb(110, 110, 110);
 }
 
 #completed-input {
