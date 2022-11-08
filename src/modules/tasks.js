@@ -25,7 +25,10 @@ export default class Tasks {
       li.draggable = true;
       li.id = task.index;
       li.innerHTML = `<div class="task-content">
-      <input type="checkbox" class="check-task" />
+      <button class="check-task">
+      <i class="fa-regular fa-square"></i>
+      <i class="fa-regular fa-square-check"></i>
+      </button>
       <input class="todo-input" id="completed-input" type="text" value="${task.description}" />
      </div>
         <button class="delete-task">
