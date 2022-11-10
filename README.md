@@ -22,8 +22,16 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-    Clone this repository
-    git clone https://github.com/jonathanmunamire/To-Do-List.git
+1. Clone this repository
+   git clone https://github.com/jonathanmunamire/To-Do-List.git
+2. run `npm install ` to install all the necessary dependencies including the linters
+3. run `npm install --save-dev jest` to install jest to your root directory
+4. Add the following to your package.json:
+   {
+   "scripts": {
+   "test": "jest"
+   }
+   }
 
 ### Install
 
