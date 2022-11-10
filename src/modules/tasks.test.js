@@ -2,8 +2,8 @@
  * @jest-environment jsdom
  */
 
- const localStorageMock = require('../__mock__/mockStorage.js');
- const Tasks = require('./storageTest.js');
+const localStorageMock = require('../__mock__/mockStorage.js');
+const Tasks = require('./storageTest.js');
 
 const task = new Tasks();
 
@@ -16,7 +16,7 @@ const html = (obj) => {
   return htmlLi;
 };
 
-//test add and remove functions
+// test add and remove functions
 describe('Adding and Removing a function', () => {
   test('adding to do task', () => {
     const mockBody = `
@@ -35,7 +35,7 @@ describe('Adding and Removing a function', () => {
     todoBody.insertAdjacentHTML('afterbegin', html(object1));
     expect(localStorageMock.data[0]).toEqual(object1);
 
-    //Rewriting Object 1
+    // Rewriting Object 1
     object1 = {
       description: 'Sammy',
       completed: true,
@@ -47,7 +47,7 @@ describe('Adding and Removing a function', () => {
     expect(localStorageMock.data[1]).toEqual(object1);
   });
 
-  //test delete function
+  // test delete function
   test('Delete todo Item', () => {
     const DeleteBtn = document.querySelectorAll('.trash');
     DeleteBtn.forEach((btn) => {
