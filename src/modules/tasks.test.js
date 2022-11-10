@@ -2,8 +2,8 @@
  * @jest-environment jsdom
  */
 
-const localStorageMock = require('../__mock__/mockStorage');
-const Tasks = require('./storageTest');
+const localStorageMock = require('../__mock__/mockStorage.js');
+const Tasks = require('./storageTest.js');
 
 const task = new Tasks();
 
@@ -24,7 +24,7 @@ describe('Adding and Removing', () => {
     // Object 1
     document.body.insertAdjacentHTML('afterbegin', mockBody);
     const todoBody = document.querySelector('.todo-body');
-    let object1 = {
+    const object1 = {
       description: 'Jonathan',
       completed: false,
       index: 1,

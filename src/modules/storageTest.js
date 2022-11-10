@@ -1,4 +1,4 @@
-const localStorageMock = require('../__mock__/mockStorage');
+const localStorageMock = require('../__mock__/mockStorage.js');
 
 class Tasks {
   constructor() {

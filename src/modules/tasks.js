@@ -104,5 +104,3 @@ export default class Tasks {
     this.saveAndRender();
   }
 }
-
-module.exports = add;
