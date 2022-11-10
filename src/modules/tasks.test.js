@@ -2,8 +2,8 @@
  * @jest-environment jsdom
  */
 
-const localStorageMock = require('../__mock__/mockStorage.js');
-const Tasks = require('./storageTest.js');
+ const localStorageMock = require('../__mock__/mockStorage.js');
+ const Tasks = require('./storageTest.js');
 
 const task = new Tasks();
 
@@ -16,7 +16,8 @@ const html = (obj) => {
   return htmlLi;
 };
 
-describe('Adding and Removing', () => {
+//test add and remove functions
+describe('Adding and Removing a function', () => {
   test('adding to do task', () => {
     const mockBody = `
     <ul class="todo-body"></ul>
@@ -24,25 +25,41 @@ describe('Adding and Removing', () => {
     // Object 1
     document.body.insertAdjacentHTML('afterbegin', mockBody);
     const todoBody = document.querySelector('.todo-body');
-    const object1 = {
+    let object1 = {
       description: 'Jonathan',
       completed: false,
       index: 1,
       id: 1,
     };
-    task.addItem(object1);
+    task.addTodo(object1);
     todoBody.insertAdjacentHTML('afterbegin', html(object1));
     expect(localStorageMock.data[0]).toEqual(object1);
+
+    //Rewriting Object 1
+    object1 = {
+      description: 'Sammy',
+      completed: true,
+      index: 2,
+      id: 2,
+    };
+    task.addTodo(object1);
+    todoBody.insertAdjacentHTML('afterbegin', html(object1));
+    expect(localStorageMock.data[1]).toEqual(object1);
   });
 
+  //test delete function
   test('Delete todo Item', () => {
     const DeleteBtn = document.querySelectorAll('.trash');
     DeleteBtn.forEach((btn) => {
       btn.addEventListener('click', (e) => {
         const elem = btn.parentNode;
         elem.remove();
-        task.removeItem(e.target.parentNode.id);
+        task.removeTodo(e.target.parentNode.id);
       });
     });
+    document.querySelector('button[id="2"]').click();
+    task.removeTodo(2);
   });
 });
+
+export { localStorageMock, task };
