@@ -1,9 +1,9 @@
 class localStorageMock {
-    static data = [];
+  static data = [];
 
-    static add(obj) {
-      localStorageMock.data.push(obj);
-    }
+  static add(obj) {
+    localStorageMock.data.push(obj);
+  }
 }
 
 module.exports = localStorageMock;
